@@ -15,7 +15,9 @@ p {
   --ocean: #404bbf;
   --lightslate: #8e8f99;
   --green: #31d0aa;
+  --duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--navyblue);
@@ -105,6 +107,8 @@ img {
 .navigation-bar .link:hover {
   background-color: var(--white);
   color: var(--iris);
+  transition: background-color var(--duration-timing),
+    color var(--duration-timing);
 }
 
 .contacts-item {
@@ -128,6 +132,8 @@ img {
 .contacts-item .link:hover {
   background-color: var(--white);
   color: var(--iris);
+  transition: background-color var(--duration-timing),
+    color var(--duration-timing);
 }
 
 .section {
@@ -188,6 +194,8 @@ img {
 .button:focus {
   background-color: var(--ocean);
   color: var(--white);
+  transition: background-color var(--duration-timing),
+    color var(--duration-timing);
 }
 
 .features-list {
@@ -345,6 +353,8 @@ img {
   color: var(--white);
 }
 
+/*Portfolio*/
+
 .filter {
   display: flex;
   justify-content: center;
@@ -370,12 +380,6 @@ img {
 
 .filter-button + .filter-button {
   margin-left: 24px;
-}
-
-.button-filter:focus,
-.button-filter:hover {
-  background-color: var(--iris);
-  color: var(--cloud);
 }
 
 .products {
@@ -447,12 +451,17 @@ img {
 .product-item:hover {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: box-shadow var(--duration-timing);
 }
 
 .button-filter:hover,
 .button-filter:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--iris);
+  color: var(--cloud);
+  transition: background-color var(--duration-timing),
+    color var(--duration-timing);
 }
 
 .team-social-list {
@@ -501,6 +510,7 @@ img {
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--iris);
+  transition: border-color var(--duration-timing);
 }
 
 .social-media-list {
@@ -546,6 +556,8 @@ img {
 .social-media-link:focus {
   color: var(--white);
   background-color: var(--green);
+  transition: background-color var(--duration-timing),
+    color var(--duration-timing);
 }
 
 .footer-link {
@@ -561,8 +573,42 @@ footer .logo-span {
 .team-social-media-link:focus {
   color: var(--white);
   background-color: var(--ocean);
+  transition: background-color var(--duration-timing),
+    color var(--duration-timing);
 }
 
 .clients-link:hover svg {
   fill: var(--iris);
+  transition: fill var(--duration-timing);
+}
+
+/*Modal Window*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--duration-timing);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  height: 580px;
+  background-color: var(--white);
+  opacity: 1;
+  transition: transform var(--duration-timing), opacity var(--duration-timing);
+  transform: translate(-50%, -50%);
 }
