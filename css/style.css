@@ -95,6 +95,7 @@ img {
 }
 
 .header-link {
+  position: relative;
   padding: 32px 0;
   color: var(--navyblue);
   font-weight: 500;
@@ -109,6 +110,26 @@ img {
   color: var(--iris);
   transition: background-color var(--duration-timing),
     color var(--duration-timing);
+}
+
+.header-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--iris);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity var(--duration-timing);
+}
+
+.header-link:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 .contacts-item {
@@ -398,6 +419,33 @@ img {
   flex-basis: calc(100% / - 30px);
 }
 
+.product-item .overlay-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-item .overlay {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  padding: 63px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  object-fit: cover;
+  object-position: center;
+
+  color: var(--white);
+  background-color: var(--iris);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform var(--duration-timing);
+}
+
 .product .link {
   text-decoration: none;
   color: var(--navyblue);
@@ -452,6 +500,11 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   transition: box-shadow var(--duration-timing);
+}
+
+.product-item:hover .overlay {
+  transform: translatex(0);
+  opacity: 1;
 }
 
 .button-filter:hover,
