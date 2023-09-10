@@ -15,7 +15,6 @@ p {
   --ocean: #404bbf;
   --lightslate: #8e8f99;
   --green: #31d0aa;
-  --duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -108,8 +107,8 @@ img {
 .navigation-bar .link:hover {
   background-color: var(--white);
   color: var(--iris);
-  transition: background-color var(--duration-timing),
-    color var(--duration-timing);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link::after {
@@ -124,7 +123,7 @@ img {
   background-color: var(--iris);
   border-radius: 2px;
   opacity: 0;
-  transition: opacity var(--duration-timing);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover::after {
@@ -153,8 +152,8 @@ img {
 .contacts-item .link:hover {
   background-color: var(--white);
   color: var(--iris);
-  transition: background-color var(--duration-timing),
-    color var(--duration-timing);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section {
@@ -215,8 +214,8 @@ img {
 .button:focus {
   background-color: var(--ocean);
   color: var(--white);
-  transition: background-color var(--duration-timing),
-    color var(--duration-timing);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .features-list {
@@ -443,7 +442,7 @@ img {
   background-color: var(--iris);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform var(--duration-timing);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product .link {
@@ -499,7 +498,7 @@ img {
 .product-item:hover {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: box-shadow var(--duration-timing);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-item:hover .overlay {
@@ -513,8 +512,8 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   background-color: var(--iris);
   color: var(--cloud);
-  transition: background-color var(--duration-timing),
-    color var(--duration-timing);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-list {
@@ -563,7 +562,7 @@ img {
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--iris);
-  transition: border-color var(--duration-timing);
+  transition: border-color v250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-list {
@@ -609,8 +608,8 @@ img {
 .social-media-link:focus {
   color: var(--white);
   background-color: var(--green);
-  transition: background-color var(--duration-timing),
-    color var(--duration-timing);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link {
@@ -626,13 +625,13 @@ footer .logo-span {
 .team-social-media-link:focus {
   color: var(--white);
   background-color: var(--ocean);
-  transition: background-color var(--duration-timing),
-    color var(--duration-timing);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover svg {
   fill: var(--iris);
-  transition: fill var(--duration-timing);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Modal Window*/
@@ -662,6 +661,7 @@ footer .logo-span {
   height: 580px;
   background-color: var(--white);
   opacity: 1;
-  transition: transform var(--duration-timing), opacity var(--duration-timing);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%);
 }
